@@ -1,52 +1,106 @@
-# Prerequisites
-*.d
+ttps://api.mybitx.com/api/1/ticker
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
 
-# Linker output
-*.ilk
-*.map
-*.exp
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+https://api.mybitx.com/api/1/ticker?pair=BTCETH
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+{
+  "ask": "1050.00",
+  "timestamp": 1366224386716,
+  "bid": "924.00",
+  "rolling_24_hour_volume": "12.52",
+  "last_trade": "950.00"
+}
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+...................
+{
+  "tickers": [
+    {
+      "timestamp": 1405413955793,
+      "bid": "6801.00",
+      "ask": "6900.00",
+      "last_trade": "6900.00",
+      "rolling_24_hour_volume": "12.455579",
+      "pair":"XBTZAR"
+    },
+    {
+      "timestamp": 1405413955337,
+      "bid": "5000.00",
+      "ask":"6968.00",
+      "last_trade": "6830.00",
+      "rolling_24_hour_volume": "0.00",
+      "pair":"XBTNAD"
+    }
+  ]
+}
+
+
+...............................................
+
+$ curl https://api.mybitx.com/api/1/orderbook?pair=BTCETH
+
+
+{
+  "timestamp": 1366305398592,
+  "bids": [
+    {
+      "volume": "0.10",
+      "price": "1100.00"
+    },
+    {
+      "volume": "0.10",
+      "price": "1000.00"
+    },
+    {
+      "volume": "0.10",
+      "price": "900.00"
+    }
+  ],
+  "asks": [
+    {
+      "volume": "0.10",
+      "price": "1180.00"
+    },
+    {
+      "volume": "0.10",
+      "price": "2000.00"
+    }
+  ]
+}
+
+https://my.linkedin.com/in/yzkee
+
+program by using Luno API to do high frequency trading.
+https://medium.com/@kyz90/luno-high-frequency-auto-trading-bot-86cb59e141a6
+
+..........................
+
+
+
+Trades
+
+GET https://api.mybitx.com/api/1/trades
+
+
+$ curl https://api.mybitx.com/api/1/trades?pair=BTCETH
+
+
+{
+  "trades": [
+    {
+      "volume": "0.10",
+      "timestamp": 1366052621774,
+      "price": "1000.00",
+      "is_buy": true
+    },
+    {
+      "volume": "1.20",
+      "timestamp": 1366052621770,
+      "price": "1020.50",
+      "is_buy": false
+    }
+  ]
+}
